@@ -2,7 +2,33 @@
     font-family: main;
     src: url(Vankours-GOnzP.ttf);
   }
+
+header{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+ 
+  padding: 2rem;
+  font-family: main;
+  font-size: 100;
+  
+}
 h1{
-    font-family: main;
-    font-size: 20;
+  color: white;
+}
+
+
+.menu{
+  background-color: transparent;
+  margin: auto;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  color: white;
+}
+.menu li{
+  font-size: 20px;
+  font-weight: 800;
+  color:#323232;
+  padding-left: 1rem;
 }
