@@ -2,10 +2,14 @@
     font-family: main;
     src: url(Vankours-jEa0O.otf);
   }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
   body{
     padding: 0;
     margin: 0;
-  }
+    }
 
 header{
   background-color: black;
@@ -35,11 +39,11 @@ h1{
 .menu li{
   font-size:2rem ;
   color:white;
-  padding-left: 25rem;
+  padding-left: 10rem;
 }
 .obrazki{
   width: 100%;
-  height: 89vh;
+  height: 84vh;
 }
 .obrazek{
   width:inherit;
