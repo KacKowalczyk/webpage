@@ -72,5 +72,6 @@ footer{
   color: white;
   background-color: black;
   justify-content: space-between;
-  
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
