@@ -40,14 +40,37 @@ h1{
     font-size: 30px;
     font-weight: 0;
     color:white;
-   padding-left: 10rem;
+   padding-left: 15vw;
 }
 .obrazki{
   width: 100%;
-  height: 84vh;
+  height: 88vh;
 }
 .obrazek{
   width:inherit;
   object-fit: cover;
   height: inherit;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+
+}
+a:visited{
+  color: white;
+  text-decoration: none;
+
+}
+
+footer{
+  display: flex;
+  font-family: main;
+  justify-content:center;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  justify-content: space-between;
+  
 }
