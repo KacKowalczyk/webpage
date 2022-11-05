@@ -2,6 +2,10 @@
     font-family: main;
     src: url(Vankours-jEa0O.otf);
   }
+  @font-face {
+    font-family: main2;
+    src: url(NotoSerif-Regular.ttf);
+  }
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -9,6 +13,7 @@
   body{
     padding: 0;
     margin: 0;
+    background-color: #171414;
     }
 
 header{
@@ -74,4 +79,22 @@ footer{
   justify-content: space-between;
   padding-left: 10vw;
   padding-right: 10vw;
+}
+h2{
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  color: white;
+  font-family: main2;
+  font-size: 12vh;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+
+}
+ol{
+  color: white;
+  font-family: main2;
+  font-size: 18px;
+  
+
 }
