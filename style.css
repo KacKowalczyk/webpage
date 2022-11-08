@@ -94,7 +94,13 @@ h2{
 ol{
   color: white;
   font-family: main2;
-  font-size: 18px;
+  font-size: 3vh;
+  
   
 
+}
+.regulamin{
+  display: block;
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
