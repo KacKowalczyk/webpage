@@ -91,16 +91,33 @@ h2{
   margin: 0 0 0 0;
 
 }
+
 ol{
   color: white;
   font-family: main2;
   font-size: 3vh;
-  
-  
-
 }
 .regulamin{
   display: block;
   margin-left: 4vw;
   margin-right: 4vw;
 }
+
+.barka{
+  height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.kontakt_tekst{
+  color: white;
+  font-family:main ;
+  font-size:20px;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid whitesmoke;
+  flex-direction: column;
+  padding: 1rem;
+}
+
