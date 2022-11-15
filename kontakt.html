@@ -27,14 +27,25 @@
     <p>UL. GRUNWALDZKA 123/1</p>
 </div>
 <div class="formularz">
-<p>SKONTAKTUJ SIE Z NAMI!</p>
-<input type="email" name="E-mail" placeholder="adres E-mail">
-<input type="text" name="imie"placeholder="imie">
-<input type="text" name="numer telefonu"placeholder="numer telefonu">
-<input type="checkbox"name="regulamin">
-<label for="regulamin"> akceptuje regulamin</label>
-<input type="button" value="wyslij">
+<form action="/action_page.php">
+  <div class="container">
+    <h2>Kontakt</h2>
+    
+  </div>
 
+  <div class="container" style="background-color:#171414">
+    <input type="text" placeholder="Imie" name="name" required>
+    <input type="text" placeholder="adres e-mail" name="mail" required>
+    <input type="text" placeholder="telefon" name="phone" required>
+    <input type="text" placeholder="wiadomość" name="phone" required>
+    <div class="regulamin">
+    <input type="checkbox" checked="checked" name="subscribe">
+    <p>Akceptuję <a href="regulamin.html"></a>REGULAMIN</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subskrybuj">
 </div>
     </section>
 
