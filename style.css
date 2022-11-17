@@ -163,5 +163,12 @@ input[type=submit]:hover {
   color: whitesmoke;
   display: flex;
   
-  justify-content: left;
+justify-content: left;
+}
+.marquee{
+  color: white;
+  font-family: main;
+  margin-top: 1rem;
+  font-size: 100%;
+
 }
