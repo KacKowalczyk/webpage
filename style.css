@@ -97,7 +97,7 @@ ol{
   font-family: main2;
   font-size: 3vh;
 }
-.regulamin{
+.regulamin_strony{
   display: block;
   margin-left: 4vw;
   margin-right: 4vw;
@@ -164,11 +164,13 @@ input[type=submit]:hover {
   display: flex;
   
 justify-content: left;
+align-items: baseline;
 }
 .marquee{
   color: white;
   font-family: main;
   margin-top: 1rem;
   font-size: 100%;
+  line-height: 2rem;
 
 }
