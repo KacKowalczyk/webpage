@@ -101,6 +101,11 @@ ol{
   display: block;
   margin-left: 4vw;
   margin-right: 4vw;
+  color: whitesmoke;
+  display: flex;
+  
+justify-content: center;
+
 }
 
 .barka{
@@ -173,4 +178,27 @@ align-items: baseline;
   font-size: 100%;
   line-height: 2rem;
 
+}
+.onas{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  background-color: rgb(18, 13, 13);
+  line-height: 40px;
+  font-family: main2;
+  font-size: 30px;
+}
+.pierwszy_paragraf{
+  display: flex;
+  justify-content: center;
+ 
+  
+
+}
+.drugi_paragraf{
+  display: flex;
+  justify-content: center;
 }
