@@ -103,8 +103,7 @@ ol{
   margin-right: 4vw;
   color: whitesmoke;
   display: flex;
-  
-justify-content: center;
+  justify-content: center;
 
 }
 
@@ -201,4 +200,14 @@ align-items: baseline;
 .drugi_paragraf{
   display: flex;
   justify-content: center;
+}
+.cennikpng{
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px){
+ 
+  .menu{
+  flex-direction: column;
+ }
 }
