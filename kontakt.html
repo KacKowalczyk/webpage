@@ -27,7 +27,7 @@
     <p>UL. GRUNWALDZKA 123/1</p>
 </div>
 <div class="formularz">
-<form action="/action_page.php">
+<form action="insert.php" method="POST">
   <div class="container">
     <h2>Kontakt</h2>
     
@@ -37,7 +37,7 @@
     <input type="text" placeholder="Imie" name="name" required>
     <input type="text" placeholder="adres e-mail" name="mail" required>
     <input type="text" placeholder="telefon" name="phone" required>
-    <input type="text" placeholder="wiadomość" name="phone" required>
+    <input rows="6" type="text" placeholder="wiadomość" name="message" required>
     <div class="regulamin">
     <input type="checkbox" checked="checked" name="subscribe">
     <p>Akceptuję <a href="regulamin.html" >REGULAMIN </a></p>
@@ -45,7 +45,7 @@
   </div>
 
   <div class="container">
-    <input type="submit" value="WYŚLIJ">
+    <input type="submit" name="submit" value="WYŚLIJ">
 </div>
     </section>
 

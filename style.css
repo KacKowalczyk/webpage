@@ -205,9 +205,26 @@ align-items: baseline;
   display: flex;
   justify-content: center;
 }
-@media (max-width: 600px){
+@media (max-width: 1000px){
  
-  .menu{
+  header{
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.menu li{
+  padding-left: 0%;
+  padding-right: 3vw;
+  
+
+} 
+.menu{
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content:  center;
+  
+ }
+ .barka{
   flex-direction: column;
  }
 }
