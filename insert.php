@@ -22,7 +22,7 @@
     <?php
     include "db-connection.php";
 
-    if(isset($_POST['submit'])&& !empty($_POST['submit']))
+    if(isset($_POST['submit']) && !empty($_POST['submit']))
     {
         $name=$_POST['name'];
         $mail=$_POST['mail'];
@@ -30,10 +30,19 @@
         $message=$_POST['message'];
 
         $insert = mysqli_query($db, "INSERT INTO `messages`(`name`, `mail`, `phone`, `message`)VALUES('$name','$mail','$phone','$message')");
-    }
-
-    ?>
     
+    if(!$insert){
+        printf("WYSTĄPIŁ BŁĄD: %s\n", mysqli_error($link));
+    }
+    else{
+        echo "Twoja Wiadomość została wysłana!";
+    }
+    }
+    else{
+        echo "Brak danych w formularzu";
+    }
+    mysqli_close($db);
+    ?>
     <footer>
             <p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjlxMHOg5L7AhUWCBAIHShWAUAQFnoECBIQAQ&url=https%3A%2F%2Fpl.wikipedia.org%2Fwiki%2FFAQ&usg=AOvVaw3_1H0Nb0TiV1PQI10x7ne2" target="_blank"> FAQ</a></p><p>© NMGYM </p><p> <a href="regulamin.html"> REGULAMIN</a></p>
         </footer>
