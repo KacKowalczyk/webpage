@@ -227,4 +227,8 @@ align-items: baseline;
  .barka{
   flex-direction: column;
  }
+ body > section > iframe{
+  padding-top: 300px!important;
+  padding-bottom:300px;
+ }
 }
