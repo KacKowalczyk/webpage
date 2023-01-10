@@ -21,7 +21,7 @@
     </header>
     <?php
     include "db-connection.php";
-
+    
     if(isset($_POST['submit']) && !empty($_POST['submit']))
     {
         $name=$_POST['name'];
@@ -29,7 +29,7 @@
         $phone=$_POST['phone'];
         $message=$_POST['message'];
 
-        $insert = mysqli_query($db, "INSERT INTO `messages`(`name`, `mail`, `phone`, `message`)VALUES('$name','$mail','$phone','$message')");
+        $insert = mysqli_query($db, "INSERT INTO `messages` (`ID`, `name`, `mail`, `phone`, `message`) VALUES (NULL, '$name', '$mail', '$phone', '$message')");
     
     if(!$insert){
         printf("WYSTĄPIŁ BŁĄD: %s\n", mysqli_error($link));

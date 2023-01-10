@@ -19,7 +19,7 @@
             <li><a href="login.html">login</a></li>
         </ul>
 </header>
-
+<main>
 <?php
     include "db-connection.php";
     if(isset($_POST['username'], $_POST['password'])){
@@ -28,8 +28,7 @@
 
 
     $username=stripcslashes($username);
-    $password=stripslashes($password);
-
+    $password=stripcslashes($password);
 
     $sql="SELECT * FROM users where username='$username' and password='$password'";
     $result=mysqli_query($db, $sql);
@@ -37,21 +36,40 @@
     $count=mysqli_num_rows($result);
 
     if($count==1){
-        $_SESSION["username"]=$username;
+        $_SESSION["name"]=$username;
         echo "jestes zalogowany/a";
     }else{
         echo "bledny login/haslo";
     }
     }
-    mysqli_close($db);
+
 
 ?>
+<section style="background-color: white; color: black;">
+<?php
 
+include "db-connection.php";
 
+if(isset($_SESSION["name"])){
+    $sql-"SELECT ID, name, mail, phone, message FROM messages";
+    $result=mysqli_query($db, $sql);
 
+    if(mysqli_num_rows($result)>0){
+        while($row=mysqli_fetch_assoc($result)){
+            echo "id:" .$row["ID"]. "Name:" .$row["name"]. "mail:" .$row["mail"]. "phone:" .$row["phone"]."Wiadomosc:" .$row["message"]."<br>";
+        }
 
-
-    <footer>
+    }else{
+        echo"Brak danych";
+    }
+}else{
+    echo "nie działa";
+}
+mysqli_close($db);
+?>
+</section>
+</main>
+<footer>
             <p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjlxMHOg5L7AhUWCBAIHShWAUAQFnoECBIQAQ&url=https%3A%2F%2Fpl.wikipedia.org%2Fwiki%2FFAQ&usg=AOvVaw3_1H0Nb0TiV1PQI10x7ne2" target="_blank"> FAQ</a></p><p>© NMGYM </p><p> <a href="regulamin.html"> REGULAMIN</a></p>
         </footer>
         
