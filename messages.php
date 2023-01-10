@@ -18,52 +18,36 @@
             <li><a href="kontakt.html">kontakt</a> </li>
             <li><a href="login.html">login</a></li>
         </ul>
-    </header>
-     <?php
-include "db-connection.php";
-if(isset($_POST['username'],$_POST['password'])){
-    $username=$_POST['username'];
-    $password=$_POST['password'];
+</header>
 
-
-$username=stripcslashes($username);
-$password=stripslashes($password);
-
-
-$sql="SELECT * FROM users where username='$username' and password='$password'";
-$result=mysqli_query($db, $sql);
-$row=mysqli_fetch_assoc($result);
-$count=mysqli_num_rows($result);
-
-if($count==1){
-    $_SESSION["username"]=$username;
-    echo "jestes zalogowany/a";
-}else{
-    echo "bledny login/haslo";
-}
-}
-mysqli_close($db);
-
-?>
 <?php
+    include "db-connection.php";
+    if(isset($_POST['username'], $_POST['password'])){
+        $username=$_POST['username'];
+        $password=$_POST['password'];
 
-include "db-connection.php";
 
-if(isset($_SESSION["username"])){
-    $sql-"SELECT id, name, mail, phone,message FROM messages";
+    $username=stripcslashes($username);
+    $password=stripslashes($password);
+
+
+    $sql="SELECT * FROM users where username='$username' and password='$password'";
     $result=mysqli_query($db, $sql);
+    $row=mysqli_fetch_assoc($result);
+    $count=mysqli_num_rows($result);
 
-    if(mysqli_num_rows($result)>0){
-        while($row=mysqli_fetch_assoc($result)){
-            echo "id:" .$row["id"]. "Imie:" .$row["name"]."Mail:" .$row["mail"]. "telefon:" .$row["phone"]."Wiadomosc:" .$row["message"]."<br>";
-        }
-
+    if($count==1){
+        $_SESSION["username"]=$username;
+        echo "jestes zalogowany/a";
     }else{
-        echo"Brak danych";
+        echo "bledny login/haslo";
     }
-}
-mysqli_close($db);
+    }
+    mysqli_close($db);
+
 ?>
+
+
 
 
 
