@@ -19,7 +19,9 @@
             <li><a href="login.html">login</a></li>
         </ul>
 </header>
-<main>
+<main class="phpclass">
+<section class="loginfo">
+    
 <?php
     include "db-connection.php";
     if(isset($_POST['username'], $_POST['password'])){
@@ -45,18 +47,20 @@
 
 
 ?>
-<section style="background-color: white; color: black;">
+</section>
+<section class="messages-php">
+    <h2>WIADOMOŚCI</h2>
 <?php
 
 include "db-connection.php";
 
 if(isset($_SESSION["name"])){
-    $sql-"SELECT ID, name, mail, phone, message FROM messages";
+    $sql="SELECT ID, name, mail, phone, message FROM messages";
     $result=mysqli_query($db, $sql);
 
     if(mysqli_num_rows($result)>0){
         while($row=mysqli_fetch_assoc($result)){
-            echo "id:" .$row["ID"]. "Name:" .$row["name"]. "mail:" .$row["mail"]. "phone:" .$row["phone"]."Wiadomosc:" .$row["message"]."<br>";
+            echo "ID: " .$row["ID"]. " Name: " .$row["name"]. " Mail: " .$row["mail"]. " Phone: " .$row["phone"]." Wiadomość: " .$row["message"]."<br>";
         }
 
     }else{
@@ -67,7 +71,10 @@ if(isset($_SESSION["name"])){
 }
 mysqli_close($db);
 ?>
+
 </section>
+<a href="index.html"> WYLOGUJ SIĘ I WRÓC DO MENU GLOWNEGO</a>
+
 </main>
 <footer>
             <p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjlxMHOg5L7AhUWCBAIHShWAUAQFnoECBIQAQ&url=https%3A%2F%2Fpl.wikipedia.org%2Fwiki%2FFAQ&usg=AOvVaw3_1H0Nb0TiV1PQI10x7ne2" target="_blank"> FAQ</a></p><p>© NMGYM </p><p> <a href="regulamin.html"> REGULAMIN</a></p>
